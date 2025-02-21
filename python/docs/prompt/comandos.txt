@@ -1,0 +1,18 @@
+#rodar com venv ligado e interpretador selecionado ctrl+shift+p
+
+venv/Scripts/activate
+
+uvicorn fist:app
+
+uvicorn fist:app --reload (para atualizar a cada modificação)
+
+
+no postman para visualizar é só colocar o ip do localhost no diretorio do get
+
+
+para o post deve ser selecionado a rota do codigo
+para a modificação no post deve ir em Body e selecionar JSON
+
+
+postgre 17 porta final 33
+senha 123
