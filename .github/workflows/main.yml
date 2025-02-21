@@ -12,9 +12,9 @@ jobs:
       postgres:
         image: postgres:13
         env:
-          POSTGRES_USER: postgres
-          POSTGRES_PASSWORD: admin
-          POSTGRES_DB: nome_database
+          POSTGRES_USER: ${{ secrets.POSTGRES_USER }}
+          POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}
+          POSTGRES_DB: ${{ secrets.POSTGRES_DB }}
         ports:
           - 5432:5432
 
@@ -38,5 +38,5 @@ jobs:
 
       - name: Executar pytest
         env:
-          DATABASE_URL: postgresql://postgres:admin@localhost:5432/nome_database
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: pytest teste.py
