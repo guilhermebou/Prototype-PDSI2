@@ -39,4 +39,4 @@ jobs:
       - name: Executar pytest
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
-        run: pytest back_end/test.py
+        run: pytest back_end/teste.py
