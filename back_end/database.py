@@ -13,7 +13,7 @@ password = getpass.getpass("PASSWORD: ")
 #password = "123"
 database = "pdsi"
 host = "localhost"
-#SQLALCHEMY_DATABASE_URL = "postgresql://postgres:mangue@localhost:5432/postgres"
+
 SQLALCHEMY_DATABASE_URL = f"postgresql://{user}:{password}@{host}:5432/{database}"
 engine = create_engine(SQLALCHEMY_DATABASE_URL)
 SessionLocal = sessionmaker( autocommit=False, autoflush=False, bind=engine)
